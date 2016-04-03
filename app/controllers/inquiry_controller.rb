@@ -6,8 +6,9 @@ class InquiryController < ApplicationController
     
     def confirm
         @inquiry = Inquiry.new(para)
+        render :index if @inquiry.invalid?
     end
-    
+
     def thanks
         @inquiry = Inquiry.new(para)
         @inquiry.save

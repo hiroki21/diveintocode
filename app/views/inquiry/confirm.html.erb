@@ -1,5 +1,6 @@
 <div class="page-header">
   <h1>お問い合わせ</h1>
+  <p>以下の内容でよろしければ、送信をお願いいたします</p>
 </div>
  
 <%= form_for @inquiry, :url => inquiry_thanks_path do |f| %>
@@ -27,4 +28,8 @@
     </tr>
   </table>
   <%= f.submit '送信', :class => 'btn btn-primary' %>
+<% end %>
+
+<%= form_for @inquiry, :url => inquiry_path do |f| %>
+  <%= f.submit '戻る', name: 'back', :class => 'btn btn-primary2' %>
 <% end %>
