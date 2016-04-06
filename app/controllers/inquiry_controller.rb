@@ -15,8 +15,14 @@ class InquiryController < ApplicationController
         render :action => 'thanks'
     end
     
+    def index2
+        @inquiry = Inquiry.new(para)
+        render :action => 'index'
+    end
+    
     private
     def para
         params.require(:inquiry).permit(:name, :email, :massage)
     end
+
 end
