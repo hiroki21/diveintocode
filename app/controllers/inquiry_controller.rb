@@ -16,7 +16,7 @@ class InquiryController < ApplicationController
     end
     
     def index2
-        @inquiry = Inquiry.new(para)
+        @inquiry = Inquiry.new(paraa)
         render :action => 'index'
     end
     
