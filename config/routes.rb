@@ -8,4 +8,8 @@ Rails.application.routes.draw do
   post 'inquiry' => 'inquiry#index2'
   post 'inquiry/confirm' => 'inquiry#confirm'
   post 'inquiry/thanks' => 'inquiry#thanks'
+  
+  if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: "/letter_opener"
+  end
 end

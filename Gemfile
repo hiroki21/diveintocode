@@ -46,3 +46,7 @@ group :development do
 end
 
 gem 'devise'
+
+gem 'rails_12factor', group: :production
+
+gem 'letter_opener_web', '~> 1.2.0', :group => :development

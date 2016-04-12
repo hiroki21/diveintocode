@@ -41,5 +41,7 @@ Rails.application.configure do
 
   # deviseの設定 
   config.action_mailer.default_url_options = { host: 'https://first-hiroki21-2.c9users.io/' }
+  
+  config.action_mailer.delivery_method = :letter_opener
 
 end

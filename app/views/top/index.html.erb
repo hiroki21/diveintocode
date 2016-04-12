@@ -4,6 +4,7 @@
 
 <% if user_signed_in? %>
     <%= link_to 'Landing', destroy_user_session_path, method: :delete, class: "btn" %>
+    <%= link_to 'My Page', edit_user_registration_path, class: "btn" %>
 <% else %>
     <%= link_to 'Dive_Now', new_user_session_path, class:'btn' %>
 <% end %>
