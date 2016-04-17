@@ -2,11 +2,9 @@
 
 <p>Dive into Code</p>
 
-<% if user_signed_in? %>
-    <%= link_to 'Landing', destroy_user_session_path, method: :delete, class: "btn" %>
-    <%= link_to 'My Page', edit_user_registration_path, class: "btn" %>
-<% else %>
-    <%= link_to 'Dive_Now', new_user_session_path, class:'btn' %>
-<% end %>
-
-<%= link_to 'Inquiry', inquiry_path, class: 'btn' %>
+<div class="jumbotron">
+  <h1>Achieve</h1>
+  <p>経験ゼロからWebエンジニアになる</p>
+  <p>Achieveは目標達成を支援するWebアプリケーションです。</p>
+  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+</div>
