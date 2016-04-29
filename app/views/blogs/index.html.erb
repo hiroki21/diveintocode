@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'Create Blog', blogs_new_path %>
+
+
+<% @blogs.each do |blog| %>
+<div class="panel panel-primary">
+   
+    <div class="panel-heading">
+        <h3 class="panel-title"><%= blog.title %></h3>
+    </div>
+
+    <div class="panel-body">
+       <%= blog.content %> </br>
+       <em><%= blog.created_at %></em>
+       <p><em>投稿者：<%= blog.user.name %></em></p>
+    </div>
+
+</div>
+   
+<% end %>

@@ -54,3 +54,4 @@ gem 'letter_opener_web', '~> 1.2.0', :group => :development
 gem 'therubyracer', platforms: :ruby 
 gem 'bootstrap-sass', '~> 3.2.0' 
 gem 'autoprefixer-rails'
+gem 'bootstrap_form'

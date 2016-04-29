@@ -7,7 +7,10 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show]
   root 'top#index'
   
-  get 'company/show' => 'company#show'
+ get 'blogs' => 'blogs#index'
+ get 'blogs/new' => 'blogs#new'
+ post 'blogs' => 'blogs#create'
+ get 'company/show' => 'company#show'
   
   get 'inquiry' => 'inquiry#index'
   post 'inquiry' => 'inquiry#index2'
