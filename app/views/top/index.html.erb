@@ -7,4 +7,8 @@
   <p>経験ゼロからWebエンジニアになる</p>
   <p>Achieveは目標達成を支援するWebアプリケーションです。</p>
   <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+  
+  <%= link_to "facebook認証", user_omniauth_authorize_path(:facebook), class: 'navbar-link' %>
+  <%= link_to "twitter認証", user_omniauth_authorize_path(:twitter), class: 'navbar-link' %>
+  
 </div>
