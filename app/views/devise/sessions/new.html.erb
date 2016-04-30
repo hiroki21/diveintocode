@@ -13,6 +13,15 @@
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
+  <a herf="/users/auth/twitter" class="btn btn-lg btn-social btn-twitter">
+    <i class="fa fa-twitter"></i> Sign in with Twitter
+  </a>
+  
+  <a herf="/users/auth/facebook" class="btn btn-lg btn-social btn-facebook">
+    <i class="fa fa-facebook"></i> Sign in with Facebook
+  </a>
+
+
   <% if devise_mapping.rememberable? -%>
     <div class="field">
       <%= f.check_box :remember_me %>
