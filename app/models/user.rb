@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
     user = User.new(name: auth.extra.raw_info.name,
                     provider: auth.provider,
                     uid: auth.uid,
-                    email: auth.info.email,
+                    email: auth.info.email ||= User.create_unique_email,
                     password: Devise.friendly_token[0,20]
                     ) 
     user.skip_confirmation!
