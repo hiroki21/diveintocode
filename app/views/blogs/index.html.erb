@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Create Blog', blogs_new_path %>
+<%= link_to 'Create Blog', new_blog_path %>
 
 
 <% @blogs.each do |blog| %>
@@ -11,9 +11,20 @@
     </div>
 
     <div class="panel-body">
+       <% if blog.user.image? %>
+　　       <%= image_tag blog.user.image.thumb.url %>
+　     <% else %>
+　　       <%= profile_image(blog.user) %>
+　     <% end %>
+       
+       </br>
        <%= blog.content %> </br>
        <em><%= blog.created_at %></em>
        <p><em>投稿者：<%= blog.user.name %></em></p>
+       <% if current_user.id == blog.user_id %>
+       <p><%= link_to "更新", edit_blog_path(blog.id) %></p>
+       <p><%= link_to "削除", blog_path(blog.id), :method => :delete %></p>
+       <% end %>
     </div>
 
 </div>

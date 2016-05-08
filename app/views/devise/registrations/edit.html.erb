@@ -18,6 +18,11 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :プロフィール画像 %>
+　　<%= f.file_field :image %> 
+  </div>
+  
+  <div class="field">
     <%= f.label :パスワード %> <i>(変えない場合は空欄にしてください)</i><br />
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
@@ -27,10 +32,12 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
-  <div class="field">
-    <%= f.label :現在のパスワード %> <i>(変更するためには現在のパスワードが必要です)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %>
-  </div>
+  <% if resource.provider.blank? %>
+    <div class="field">
+      <%= f.label :現在のパスワード %> <i>(変更するためには現在のパスワードが必要です)</i><br />
+      <%= f.password_field :current_password, autocomplete: "off" %>
+    </div>
+  <% end %>
 
   <div class="actions">
     <%= f.submit "アップデート" %>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Day6</title>
+  <title>Achieve</title>
   <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,7 +33,7 @@
             <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><%= link_to 'Create Blog', blogs_new_path %></li>
+              <li><%= link_to 'Create Blog', new_blog_path %></li>
               <li><%= link_to 'Blogs List', blogs_path %></li>
               <li><%= link_to 'My Page', edit_user_registration_path %></li>
               <li><%= link_to 'User List', users_path %></li>

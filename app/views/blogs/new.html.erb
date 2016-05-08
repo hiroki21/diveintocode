@@ -7,8 +7,10 @@
   
   <div class="form-group">
   <h2>内容</h2>
-  <%= f.text_field :content %>
+  <%= f.text_field :content, class: 'blog_content', row: 10 %>
   </div>
+  
+  <%= f.hidden_field :user_id, value: current_user.id %>
   
   <%= f.submit %>
 
