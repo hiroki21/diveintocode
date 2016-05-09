@@ -9,8 +9,10 @@
   </div>
 
   <div class="field">
+    <% unless resource.provider.blank? %>
+    <% resource.email = "" %>
+    <% end %>
     <%= f.label :メールアドレス %><br />
-    <% @user.email = "" %>
     <%= f.email_field :email, autofocus: true %>
   </div>
 
