@@ -2,7 +2,7 @@ class BlogsController < ApplicationController
     before_action :correct_user,   only: [:edit, :update, :destroy]
 
     def index
-        @blogs = Blog.all
+        @blogs = Blog.paginate(page: params[:page])
     end
     
     def new

@@ -2,6 +2,7 @@
 
 <%= link_to 'Create Blog', new_blog_path %>
 
+<%= will_paginate %>
 
 <% @blogs.each do |blog| %>
 <div class="panel panel-primary">
@@ -11,7 +12,7 @@
     </div>
 
     <div class="panel-body">
-       <% if blog.user.image? %>
+       <% if blog.user.image.nil? %>
 　　       <%= image_tag blog.user.image.thumb.url %>
 　     <% else %>
 　　       <%= profile_image(blog.user) %>
@@ -30,3 +31,5 @@
 </div>
    
 <% end %>
+
+<%= will_paginate %>

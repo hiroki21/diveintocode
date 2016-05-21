@@ -65,3 +65,15 @@ gem 'font-awesome-rails'
 
 gem 'carrierwave'
 gem 'rmagick'
+
+gem 'faker'
+
+gem 'pry'
+gem 'pry-remote'
+gem 'pry-nav'
+
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+
+gem 'rspec-rails'
+gem 'capybara'

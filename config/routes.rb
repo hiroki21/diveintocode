@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'about/company_overview'
+
   get 'users/index'
   get 'users/show'
 
@@ -20,6 +22,8 @@ Rails.application.routes.draw do
   post 'inquiry' => 'inquiry#index2'
   post 'inquiry/confirm' => 'inquiry#confirm'
   post 'inquiry/thanks' => 'inquiry#thanks'
+  
+  get 'about' => 'about#company_overview'
   
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"
