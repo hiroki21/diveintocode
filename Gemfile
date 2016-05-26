@@ -77,3 +77,28 @@ gem 'bootstrap-will_paginate'
 
 gem 'rspec-rails'
 gem 'capybara'
+
+gem 'rambulance'
+
+group :test, :development do 
+gem 'awesome_print' 
+gem 'better_errors' 
+gem 'binding_of_caller' 
+gem 'database_rewinder'
+gem 'factory_girl_rails' 
+gem 'hirb-unicode' 
+gem 'hirb' 
+gem 'pry-byebug' 
+gem 'pry-doc' 
+gem 'pry-rails' 
+gem 'pry-stack_explorer' 
+gem 'quiet_assets' 
+gem 'tapp'
+gem 'timecop' 
+gem "annotate", github: "ctran/annotate_models" 
+gem "colorize_unpermitted_parameters" 
+gem "guard-rspec", require: false 
+gem "rack-mini-profiler"
+gem "spring-commands-rspec" 
+gem "xray-rails" 
+end

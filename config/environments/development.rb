@@ -43,5 +43,7 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'https://first-hiroki21-2.c9users.io/' }
   
   config.action_mailer.delivery_method = :letter_opener
+  
+  BetterErrors::Middleware.allow_ip! '10.240.0.211'
 
 end
