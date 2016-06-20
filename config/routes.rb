@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'inbox/index'
+
   get 'about/company_overview'
 
   get 'users/index'
