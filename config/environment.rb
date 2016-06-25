@@ -11,7 +11,7 @@ ActionMailer::Base.smtp_settings =
 :password => "sujkydsn2730",
 :domain => "heroku.com", 
 :address => "smtp.sendgrid.net", 
-:port => 2525, 
+:port => 587, 
 :authentication => :plain, 
 :enable_starttls_auto => true 
 }
