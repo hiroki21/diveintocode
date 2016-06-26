@@ -13,7 +13,7 @@ class InquiryController < ApplicationController
         @inquiry = Inquiry.new(para)
         @inquiry.save
         
-       UserMailer.inquiry_email(@inquiry).deliver_now
+       # UserMailer.inquiry_email(@inquiry).deliver_now
         
         render :action => 'thanks'
     end
